@@ -4,15 +4,18 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Name</th>
-        <th scope="col">Email</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Kapazität</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let weddingLocation of weddingLocations">
-        <td>{{ weddingLocation.capacity }}</td>
+
         <td>{{ weddingLocation.name }}</td>
+
+        <td>{{ weddingLocation.address.street }}&nbsp;{{ weddingLocation.address.streetNumber }}, &nbsp;{{ weddingLocation.address.postalCode }}&nbsp;{{ weddingLocation.address.city }}</td>
+        <td>{{ weddingLocation.capacity }}</td>
       </tr>
       </tbody>
     </table>
